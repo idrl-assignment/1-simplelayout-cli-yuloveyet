@@ -18,7 +18,6 @@ def main():
     if args.board_grid % args.unit_grid != 0:
         print('modify unit_grid')
         exit()
-
     if len(args.positions) != args.unit_n:
         print('modify positions list')
         exit()
@@ -26,7 +25,6 @@ def main():
         if i > (args.board_grid/args.unit_grid)**2 or i < 1:
             print('modify positions num')
             exit()
-            
     if not os.path.exists(args.outdir):
         os.makedirs(args.outdir)
     file1 = args.outdir + '/' + args.file_name + '.mat'
